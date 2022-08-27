@@ -2,7 +2,7 @@
  * @Author: yin-qiyu yinqiyu66@163.com
  * @Date: 2022-08-27 19:12:42
  * @LastEditors: yin-qiyu yinqiyu66@163.com
- * @LastEditTime: 2022-08-27 20:25:10
+ * @LastEditTime: 2022-08-27 20:31:26
  * @FilePath: /data-structure/查找/binary_search.cpp
  * @Description: 
  * 
@@ -28,7 +28,7 @@ int binary_search(int target, int arr[], int len){
         if(arr[mid] < target)
             l = mid + 1;
         else if(target < arr[mid])
-            r = mid -1;
+            r = mid - 1;
         else
             return mid;
     }
@@ -44,4 +44,23 @@ int main(int argc, char const *argv[])
     int len = sizeof(arr)/sizeof(int) - 1;
     printf("target: %d, pos: %d\n", target, binary_search(target, arr, len));
     return 0;
+}
+
+
+//第二种写法
+int binary_search(int target, int arr[], int len){
+    int l = 0, r = len - 1, mid;
+    while (l < r)
+    {
+        mid = l + (r - l)/2; //防止int溢出
+        if(arr[mid] == target)
+            return mid;
+        else if(target < arr[mid])
+            r = mid - 1;
+        else
+            l = mid + 1;
+            
+    }
+    return -1;
+    
 }
