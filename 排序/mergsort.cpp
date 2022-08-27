@@ -3,6 +3,15 @@
 #include <vector>
 using namespace std;
 
+/**
+ * @description: 
+ * @param {int} arr
+ * @param {int} tempArr
+ * @param {int} left
+ * @param {int} mid
+ * @param {int} right
+ * @return {*}
+ */
 void merge(int arr[], int tempArr[], int left, int mid, int right)
 {
     // 标记左半区第一个未排序的元素
@@ -37,7 +46,15 @@ void merge(int arr[], int tempArr[], int left, int mid, int right)
     }
 }
 
-// 归并排序
+
+/**
+ * @description: 
+ * @param {int} arr
+ * @param {int} tempArr
+ * @param {int} left
+ * @param {int} right
+ * @return {*}
+ */
 void msort(int arr[], int tempArr[], int left, int right)
 {
     // 如果只有一个元素，那么不需要继续划分
@@ -55,7 +72,12 @@ void msort(int arr[], int tempArr[], int left, int right)
     }
 }
 
-// 归并排序入口
+/**
+ * @description: 
+ * @param {int} arr
+ * @param {int} n
+ * @return {*}
+ */
 void merge_sort(int arr[], int n)
 {
     // 分配一个辅助数组
