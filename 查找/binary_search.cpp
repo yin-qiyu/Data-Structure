@@ -2,9 +2,9 @@
  * @Author: yin-qiyu yinqiyu66@163.com
  * @Date: 2022-08-27 19:12:42
  * @LastEditors: yin-qiyu yinqiyu66@163.com
- * @LastEditTime: 2022-08-27 20:31:26
+ * @LastEditTime: 2022-08-27 20:42:43
  * @FilePath: /data-structure/查找/binary_search.cpp
- * @Description: 
+ * @Description: 二分查找
  * 
  * Copyright (c) 2022 by yin-qiyu yinqiyu66@163.com, All Rights Reserved. 
  */
@@ -22,7 +22,7 @@ using namespace std;
  */
 int binary_search(int target, int arr[], int len){
     int l = 0, r = len - 1, mid;
-    while (l < r)
+    while (l <= r)
     {
         mid = l + (r - l)/2; //防止int溢出
         if(arr[mid] < target)
@@ -32,6 +32,7 @@ int binary_search(int target, int arr[], int len){
         else
             return mid;
     }
+    // return l; // 返回插入位置 
     return -1;
     
 }
@@ -44,23 +45,4 @@ int main(int argc, char const *argv[])
     int len = sizeof(arr)/sizeof(int) - 1;
     printf("target: %d, pos: %d\n", target, binary_search(target, arr, len));
     return 0;
-}
-
-
-//第二种写法
-int binary_search(int target, int arr[], int len){
-    int l = 0, r = len - 1, mid;
-    while (l < r)
-    {
-        mid = l + (r - l)/2; //防止int溢出
-        if(arr[mid] == target)
-            return mid;
-        else if(target < arr[mid])
-            r = mid - 1;
-        else
-            l = mid + 1;
-            
-    }
-    return -1;
-    
 }
