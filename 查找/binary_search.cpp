@@ -2,7 +2,7 @@
  * @Author: yin-qiyu yinqiyu66@163.com
  * @Date: 2022-08-27 19:12:42
  * @LastEditors: yin-qiyu yinqiyu66@163.com
- * @LastEditTime: 2022-08-27 20:14:54
+ * @LastEditTime: 2022-08-27 20:25:10
  * @FilePath: /data-structure/查找/binary_search.cpp
  * @Description: 
  * 
@@ -18,13 +18,13 @@ using namespace std;
  * @param {int} target 目标函数
  * @param {int} arr 数组
  * @param {int} len 长度
- * @return {*} 找到 返回mid，未找到返回-1
+ * @return {*} 找到 返回m下标，未找到返回-1
  */
 int binary_search(int target, int arr[], int len){
     int l = 0, r = len - 1, mid;
     while (l < r)
     {
-        mid = (l + r)/2;
+        mid = l + (r - l)/2; //防止int溢出
         if(arr[mid] < target)
             l = mid + 1;
         else if(target < arr[mid])
