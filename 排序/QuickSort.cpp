@@ -1,10 +1,26 @@
+/*
+ * @Author: yin-qiyu yinqiyu66@163.com
+ * @Date: 2022-08-27 14:19:29
+ * @LastEditors: yin-qiyu yinqiyu66@163.com
+ * @LastEditTime: 2022-08-27 20:03:24
+ * @FilePath: /data-structure/排序/QuickSort.cpp
+ * @Description: 快排
+ * 
+ * Copyright (c) 2022 by yin-qiyu yinqiyu66@163.com, All Rights Reserved. 
+ */
 #include <iostream>
 #include <vector>
 using namespace std;
 
-//第一个元素为pivot
+/**
+ * @description: 
+ * @param {int} a 数组
+ * @param {int} l 最左边元素
+ * @param {int} r 最右边元素
+ * @return {*} pivot
+ */
 int partition(int a[], int l, int r){
-    int pivot = a[l];   //设表中第一个元素为pivot
+    int pivot = a[l];   //设表中第一个元素为pivot 
     while (l < r)
     {
         while(l < r && a[r] >= pivot) r--; //如果r大于pivot，指针左移
