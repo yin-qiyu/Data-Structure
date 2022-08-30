@@ -2,7 +2,13 @@
 #include <vector>
 using namespace std;
 
-//第一个元素为pivot
+/**
+ * @description: 划分操作，将未排序数组划分为左， pivot，右
+ * @param {int} a 数组
+ * @param {int} l 最小下标
+ * @param {int} r 最大下标
+ * @return {*} pivot
+ */
 int partition(int a[], int l, int r){
     int pivot = a[l];   //设表中第一个元素为pivot
     while (l < r)
@@ -16,7 +22,13 @@ int partition(int a[], int l, int r){
     return l;
 }
 
-
+/**
+ * @description: 递归快排
+ * @param {int} a 数组
+ * @param {int} l 最小下标
+ * @param {int} r 最大下标
+ * @return {*} null
+ */
 void quicksort(int a[],int l, int r){
     if(l < r){
         int pos = partition(a, l, r);
