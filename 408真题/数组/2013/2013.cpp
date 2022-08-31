@@ -2,7 +2,7 @@
  * @Author: yin-qiyu yinqiyu66@163.com
  * @Date: 2022-08-31 20:01:02
  * @LastEditors: yin-qiyu yinqiyu66@163.com
- * @LastEditTime: 2022-08-31 23:30:32
+ * @LastEditTime: 2022-08-31 23:44:42
  * @FilePath: /data-structure/408真题/数组/2013/2013.cpp
  * @Description: 
  * 
@@ -69,19 +69,19 @@ void randomized_quicksort(int a[],int l, int r){
  * @param {int} n
  * @return {*}
  */
-void ans2(int a[], int n){
+void ans1(int a[], int n){
     randomized_quicksort(a, 0, n-1);
     int l = 0;
     for (int i = 0; i < n; i++)
     {
-        if (a[i] != a[l])
+        if (a[i] != a[l])       //遇到元素a[i]
         {
-            if (i-l>n/2)
+            if (i-l>n/2)       //如果当前元素下标-上一个不相等元素下标 =（元素个数）> 总数一半
             {
-                cout<<a[l];
+                cout<<a[l];     
                 return;
             }
-            l = i;
+            l = i;  //记录值不一样的元素
         }
     }
         cout<<-1;
@@ -91,6 +91,6 @@ void ans2(int a[], int n){
 int main(int argc, char const *argv[])
 {
     int a[] ={0, 5, 5, 3, 5, 1, 5, 7, 5};
-    ans2(a, 9);
+    ans1(a, 9);
     return 0;
 }
