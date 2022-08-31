@@ -1,17 +1,17 @@
 /*
  * @Author: yin-qiyu yinqiyu66@163.com
- * @Date: 2022-08-30 16:08:18
+ * @Date: 2022-08-31 20:01:02
  * @LastEditors: yin-qiyu yinqiyu66@163.com
- * @LastEditTime: 2022-08-31 20:23:04
- * @FilePath: /data-structure/排序/RandomQuickSort.cpp
- * @Description: 随机pivot快排。时间复杂度：基于随机选取主元的快速排序时间复杂度为期望 O(nlogn),空间复杂读：O(n)。
+ * @LastEditTime: 2022-08-31 23:30:32
+ * @FilePath: /data-structure/408真题/数组/2013/2013.cpp
+ * @Description: 
  * 
  * Copyright (c) 2022 by yin-qiyu yinqiyu66@163.com, All Rights Reserved. 
  */
-
 #include <iostream>
 #include <vector>
 using namespace std;
+
 
 /**
  * @description: 划分操作，将未排序数组划分为左， pivot，右
@@ -61,16 +61,36 @@ void randomized_quicksort(int a[],int l, int r){
     }
 }
 
+/**
+ * @description: 先快速排序得到升序序列，权值相同的元素都会相邻，
+ * 扫描一趟数组，L是之前相邻的相同元素最左边的元素下标，i是此时正在扫描的元素下标，
+ * 如果A[i]不等于A[L]则说明碰到了新的元素。
+ * @param {int} a
+ * @param {int} n
+ * @return {*}
+ */
+void ans2(int a[], int n){
+    randomized_quicksort(a, 0, n-1);
+    int l = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] != a[l])
+        {
+            if (i-l>n/2)
+            {
+                cout<<a[l];
+                return;
+            }
+            l = i;
+        }
+    }
+        cout<<-1;
+        return;     
+}
 
 int main(int argc, char const *argv[])
 {
-    int arr[] = {5,1,1,2,0,0};
-    //int arr[] = {5,2,3,1,2};
-    randomized_quicksort(arr, 0, sizeof(arr)/sizeof(int) - 1);
-    for (int i = 0; i < sizeof(arr)/sizeof(int); i++)
-    {
-        printf("%d ",arr[i]);
-    }
-    
+    int a[] ={0, 5, 5, 3, 5, 1, 5, 7, 5};
+    ans2(a, 9);
     return 0;
 }

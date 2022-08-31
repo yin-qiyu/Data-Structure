@@ -1,4 +1,13 @@
-
+/*
+ * @Author: yin-qiyu yinqiyu66@163.com
+ * @Date: 2022-08-27 16:52:28
+ * @LastEditors: yin-qiyu yinqiyu66@163.com
+ * @LastEditTime: 2022-08-31 19:48:19
+ * @FilePath: /data-structure/排序/mergsort.cpp
+ * @Description: 归并排序
+ * 
+ * Copyright (c) 2022 by yin-qiyu yinqiyu66@163.com, All Rights Reserved. 
+ */
 #include <iostream>
 #include <vector>
 using namespace std;
