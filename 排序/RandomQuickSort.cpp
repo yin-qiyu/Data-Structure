@@ -1,14 +1,9 @@
 /*
- * @Author: yin-qiyu yinqiyu66@163.com
+ * @Author: yin-qiyu
  * @Date: 2022-08-30 16:08:18
- * @LastEditors: yin-qiyu yinqiyu66@163.com
- * @LastEditTime: 2022-08-31 20:23:04
- * @FilePath: /data-structure/排序/RandomQuickSort.cpp
+ * @LastEditTime: 2022-09-01 14:39:58
  * @Description: 随机pivot快排。时间复杂度：基于随机选取主元的快速排序时间复杂度为期望 O(nlogn),空间复杂读：O(n)。
- * 
- * Copyright (c) 2022 by yin-qiyu yinqiyu66@163.com, All Rights Reserved. 
  */
-
 #include <iostream>
 #include <vector>
 using namespace std;

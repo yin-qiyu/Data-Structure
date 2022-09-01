@@ -1,12 +1,8 @@
 /*
- * @Author: yin-qiyu yinqiyu66@163.com
+ * @Author: yin-qiyu
  * @Date: 2022-08-27 14:19:29
- * @LastEditors: yin-qiyu yinqiyu66@163.com
- * @LastEditTime: 2022-08-31 19:49:19
- * @FilePath: /data-structure/排序/QuickSort.cpp
+ * @LastEditTime: 2022-09-01 14:39:42
  * @Description: 快速排序，默认arr[l]为pivot
- * 
- * Copyright (c) 2022 by yin-qiyu yinqiyu66@163.com, All Rights Reserved. 
  */
 #include <iostream>
 #include <vector>
