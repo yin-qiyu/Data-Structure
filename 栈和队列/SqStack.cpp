@@ -1,8 +1,8 @@
 /*
  * @Author: yin-qiyu
  * @Date: 2022-09-01 12:07:31
- * @LastEditTime: 2022-09-01 14:39:03
- * @Description: 顺序栈的基本操作
+ * @LastEditTime: 2022-09-15 21:56:46
+ * @Description: 顺序栈的基本操作 用数组实现
  */
 
 #include <iostream>
@@ -16,22 +16,24 @@ typedef struct SqStack
     int top;        //定义顶指针
 };
 
+//初始化
 void initStack(SqStack &s){
     s.top = -1;
 }
 
+//判空
 bool stcakEmpty(SqStack s){
     if (s.top == -1)
-    {
-       return true;
-    }
+        return true;    //空
+    else
+        return false;   //不空
 }
 
 //元素入栈
 bool push(SqStack &s,int x){
-    if(s.top == -1)
-        return false;
-    s.data[++s.top] = x;
+    if(s.top == -1)         //栈满 报错
+        return false;   
+    s.data[++s.top] = x;    //指针+1 在入栈
     return true;
 }
 

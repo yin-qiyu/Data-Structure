@@ -1,8 +1,8 @@
 /*
  * @Author: yin-qiyu
  * @Date: 2022-09-01 12:09:34
- * @LastEditTime: 2022-09-01 14:38:47
- * @Description: 链栈的基本操作  栈顶在链头，栈顶在链尾
+ * @LastEditTime: 2022-09-15 23:17:32
+ * @Description: 链栈 单链表实现 栈顶在链头
  */
 
 #include <iostream>
@@ -57,16 +57,3 @@ bool Pop (LiStack &S, int &x){
 //-----end栈顶在链头-----
 
 
-//-----start栈顶在链尾-----
-//双链表实现
-typedef struct DBNode
-{
-    /* data */
-};
-//初始化一个链栈（单链表实现，栈顶在链头
-//判断栈是否为空
-//入栈（在双链表链尾插入）
-//出栈（删除双链表链尾元素）
-
-
-//-----end栈顶在链尾-----
