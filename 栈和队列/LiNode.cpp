@@ -1,7 +1,7 @@
 /*
  * @Author: yin-qiyu
  * @Date: 2022-09-01 12:09:34
- * @LastEditTime: 2022-09-15 23:17:32
+ * @LastEditTime: 2022-09-15 23:34:05
  * @Description: 链栈 单链表实现 栈顶在链头
  */
 
@@ -10,12 +10,11 @@
 using namespace std;
 
 //-----start栈顶在链头-----
-//单链表实现
+//定义栈结点
 typedef struct SNode{			//定义单链表结点类型
     int data;				        //每个节点存放一个数据元素
     struct SNode *next;			//指针指向下一个节点
 }SNode, *LiStack;
-
 
 //初始化一个链栈（单链表实现，栈顶在链头）
 bool InitStack(LiStack &S) {
@@ -24,11 +23,10 @@ bool InitStack(LiStack &S) {
     return true;
 }
 
-
 //判断栈是否为空
-bool(LiStack s){
-    if(s->next == NULL)
-        return true;
+bool StackEmpty(LiStack S){
+    if(S->next==NULL)   //头结点后面没有结点
+        return true;    //返回true，表示栈为空
     else
         return false;
 }
@@ -42,7 +40,7 @@ bool Push (LiStack &S, int x){
     return true;
 }
 
-//出栈
+//出栈（本质上是单链表的“头删法”）
 bool Pop (LiStack &S, int &x){
     if (StackEmpty(S))      //栈空，出栈操作失败
         return false;

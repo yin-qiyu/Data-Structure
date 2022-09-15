@@ -1,7 +1,7 @@
 /*
  * @Author: yin-qiyu
  * @Date: 2022-09-15 23:14:51
- * @LastEditTime: 2022-09-15 23:20:36
+ * @LastEditTime: 2022-09-15 23:27:27
  * @Description: 链栈 双链表 实现，栈顶在链尾
  */
 
@@ -11,12 +11,13 @@ using namespace std;
 
 
 //-----start栈顶在链尾-----
-//定义栈结点
+//定义栈节点
 typedef struct DbSNode{			    //定义双链表结点类型
     int data;				        //每个节点存放一个数据元素
     struct DbSNode *last,*next;	    //指向前后两个结点
 }DbSNode;
 
+//定义结构体
 typedef struct DbLiStack{	        //双链表实现的栈（栈顶在链尾）
     struct DbSNode *head, *rear;    //两个指针，分别指向链头、链尾
 }DbLiStack, *DbStack;
