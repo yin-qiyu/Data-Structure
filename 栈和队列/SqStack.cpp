@@ -1,7 +1,7 @@
 /*
  * @Author: yin-qiyu
  * @Date: 2022-09-01 12:07:31
- * @LastEditTime: 2022-09-15 21:56:46
+ * @LastEditTime: 2022-09-15 23:56:40
  * @Description: 顺序栈的基本操作 用数组实现
  */
 
@@ -33,7 +33,7 @@ bool stcakEmpty(SqStack s){
 bool push(SqStack &s,int x){
     if(s.top == -1)         //栈满 报错
         return false;   
-    s.data[++s.top] = x;    //指针+1 在入栈
+    s.data[++s.top] = x;    //指针先+1，再入栈
     return true;
 }
 
@@ -41,7 +41,7 @@ bool push(SqStack &s,int x){
 bool pop(SqStack &s, int &x){
     if (s.top == -1) 
         return false;
-    x = s.data[s.top--];
+    x = s.data[s.top--];    //先出栈，指针再-1
 }
 
 //读栈顶元素
