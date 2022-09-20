@@ -1,9 +1,11 @@
-//
-//  main.cpp
-//  Prim
-//
-//  Created by yinqiyu on 2021/6/15.
-//
+/*
+ * @Author: yin-qiyu
+ * @Date: 2022-08-23 22:58:19
+ * @LastEditTime: 2022-09-20 11:02:47
+ * @Description: prim最小生成树
+ * 
+ */
+
 
 #include <iostream>
 #include <cstring>

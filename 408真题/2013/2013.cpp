@@ -1,13 +1,11 @@
 /*
- * @Author: yin-qiyu yinqiyu66@163.com
+ * @Author: yin-qiyu
  * @Date: 2022-08-31 20:01:02
- * @LastEditors: yin-qiyu yinqiyu66@163.com
- * @LastEditTime: 2022-08-31 23:44:42
- * @FilePath: /data-structure/408真题/数组/2013/2013.cpp
- * @Description: 
+ * @LastEditTime: 2022-09-16 22:55:46
+ * @Description: 2013年
  * 
- * Copyright (c) 2022 by yin-qiyu yinqiyu66@163.com, All Rights Reserved. 
  */
+
 #include <iostream>
 #include <vector>
 using namespace std;

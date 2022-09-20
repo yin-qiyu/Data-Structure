@@ -1,7 +1,7 @@
 /*
  * @Author: yin-qiyu
  * @Date: 2022-08-30 16:08:18
- * @LastEditTime: 2022-09-01 14:39:58
+ * @LastEditTime: 2022-09-16 23:14:27
  * @Description: 随机pivot快排。时间复杂度：基于随机选取主元的快速排序时间复杂度为期望 O(nlogn),空间复杂读：O(n)。
  */
 #include <iostream>
@@ -20,12 +20,12 @@ int partition(int a[], int l, int r){
     while (l < r)
     {
         while(l < r && a[r] >= pivot) r--; //如果r大于pivot，指针左移
-        a[l] = a[r];    //r < povot交换lr位置
+        a[l] = a[r];    //r < pivot交换lr位置
         while(l < r && a[l] <= pivot) l++;
         a[r] = a[l];
     }
-    a[l] = pivot;
-    return l;
+    a[l] = pivot;   //枢轴元素放到最终位置
+    return l;       //返回枢轴最终位置
 }
 
 /**

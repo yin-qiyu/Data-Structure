@@ -1,14 +1,13 @@
 /*
  * @Author: yin-qiyu
  * @Date: 2022-09-15 23:14:51
- * @LastEditTime: 2022-09-15 23:27:27
+ * @LastEditTime: 2022-09-20 11:06:55
  * @Description: 链栈 双链表 实现，栈顶在链尾
  */
 
 #include <iostream>
 #include <vector>
 using namespace std;
-
 
 //-----start栈顶在链尾-----
 //定义栈节点
