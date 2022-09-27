@@ -1,7 +1,7 @@
 /*
  * @Author: yin-qiyu
  * @Date: 2022-09-16 23:43:10
- * @LastEditTime: 2022-09-16 23:45:55
+ * @LastEditTime: 2022-09-27 22:28:41
  * @Description: 2018年
  * 找出数组中未出现的最小正整数
  * 
@@ -25,7 +25,6 @@ int partition(int a[], int l, int r){
     return l;       //返回枢轴最终位置
 }
 
-
 int randomized_partition(int a[], int l, int r){
     int i = rand() % (r - l + 1) + l; // 随机选一个作为我们的主元,(r-l)防止溢出
     swap(a[l], a[i]);
@@ -41,17 +40,73 @@ void randomized_quicksort(int a[],int l, int r){
     }
 }
 
-
 void ans(int a[], int n){
-   
+    randomized_quicksort(a, 0, n-1);
+    int i = 0;
+    while (i < n && a[i] <= 0){
+        i++;
+    }
+    if(i == n){
+            cout<<1;
+            cout<<"\n";
+            return;
+            }   
+    //到这里a[i]是数组中最小的正数
+    int t = 1;
+    if(a[i] != t){
+        cout<< t ;
+        cout<<"\n";
+        return;
+    }
+    for (int j = i; j < n; j++){
+        if(t == a[j]){
+            continue;
+        }
+        if(t+1 == a[j]){
+            t++;
+        }
+        else{
+            cout<<t + 1;
+            cout<<"\n";
+            return;
+        }
+    }
+    cout<<t+1;
+    cout<<"\n";
 }
 
 
 int main(int argc, char const *argv[])
 {
     int a1[] = {-5, 3, 2, 3};
-    int a2[] = {1, 2 ,3};
     ans(a1, 4);
-    ans(a2, 4);
+    for (int i = 0; i < 4; i++)
+    {
+        cout<<a1[i] ;
+    }
+    
+    cout<<"\n";
+    int a2[] = {1, 2 ,3};
+    ans(a2, 3);
+    for (int i = 0; i < 3; i++)
+    {
+        cout<<a2[i] ;
+    }
+
+    cout<<"\n";
+    int a3[] = {-1, 0 ,1, 2, 3 };
+    ans(a3, 5);
+    for (int i = 0; i < 5; i++)
+    {
+        cout<<a3[i] ;
+    }
+
+    cout<<"\n";
+    int a4[] = {-5, -4, -3, -2, -1 };
+    ans(a4, 5);
+    for (int i = 0; i < 5; i++)
+    {
+        cout<<a4[i] ;
+    }
     return 0;
 }
