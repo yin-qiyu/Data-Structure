@@ -1,18 +1,11 @@
 /*
  * @Author: yin-qiyu
  * @Date: 2022-09-20 11:08:25
- * @LastEditTime: 2022-09-20 12:09:49
+ * @LastEditTime: 2022-09-29 17:58:01
  * @Description: 
  * 
  */
-/*
- * @Author: yin-qiyu
- * @Date: 2022-09-20 11:08:25
- * @LastEditTime: 2022-09-20 11:39:12
- * @Description: sequence binary tree
- * 顺序存储二叉树
- * 
- */
+
 
 
 #include <iostream>
