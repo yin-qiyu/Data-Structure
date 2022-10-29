@@ -1,7 +1,7 @@
 /*
  * @Author: yin-qiyu
  * @Date: 2022-09-01 12:09:34
- * @LastEditTime: 2022-09-20 11:34:05
+ * @LastEditTime: 2022-10-07 12:58:40
  * @Description: 链栈 单链表实现 栈顶在链头
  */
 
@@ -10,11 +10,11 @@
 using namespace std;
 
 //-----start栈顶在链头-----
-//定义栈结点
+//定义栈结点，动态数组
 typedef struct SNode{			//定义单链表结点类型
     int data;				        //每个节点存放一个数据元素
     struct SNode *next;			//指针指向下一个节点
-}SNode, *LiStack;
+}SNode, *LiStack;       
 
 //初始化一个链栈（单链表实现，栈顶在链头）
 bool InitStack(LiStack &S) {
