@@ -1,7 +1,7 @@
 /*
  * @Author: yin-qiyu
  * @Date: 2022-09-01 12:07:31
- * @LastEditTime: 2022-09-15 23:56:40
+ * @LastEditTime: 2022-10-07 12:59:02
  * @Description: 顺序栈的基本操作 用数组实现
  */
 
@@ -12,7 +12,7 @@ using namespace std;
 
 typedef struct SqStack
 {
-    int data[50];   //存放栈的元素
+    int data[50];   //存放栈的元素，静态数组
     int top;        //定义顶指针
 };
 
